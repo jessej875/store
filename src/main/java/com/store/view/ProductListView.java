@@ -30,11 +30,9 @@ public class ProductListView implements FXComponent {
         BorderPane root = new BorderPane();
         root.getStyleClass().add("root");
 
-        // Header
         HBox header = createHeader();
         root.setTop(header);
 
-        // Content
         if (store.isLoading()) {
             Label loadingLabel = new Label("Loading products...");
             loadingLabel.getStyleClass().add("loading-label");
